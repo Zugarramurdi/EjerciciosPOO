@@ -111,7 +111,7 @@ public class VideoJuego implements Entregable{
     // Este metodo no lo llegamos a usar en el ejercicio por alguna razon
     @Override
     public void compareTo(Object a) {
-        if (a instanceof VideoJuego) {
+        if (a instanceof VideoJuego) { // comprobamos si el objeto que se pasa por parametro es de tipo VideoJuego
             VideoJuego juego = (VideoJuego) a;
             if (horasEstimadas > juego.horasEstimadas) {
                 System.out.println("El juego con mas horas es: " + titulo);

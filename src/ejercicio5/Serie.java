@@ -112,15 +112,16 @@ public class Serie implements Entregable {
     // este metodo tampoco nos lo pide usar en la Clase Serie
     @Override
     public void compareTo(Object a) {
+        if ( a instanceof Serie) { // comprobamos si el objeto a comparar es una serie
         Serie serie = (Serie) a;
-        if (numTemporadas > serie.numTemporadas){
-            System.out.println("La serie con mas temporadas es: " + titulo);
-            System.out.println(toString());
+            if (numTemporadas > serie.numTemporadas){
+                System.out.println("La serie con mas temporadas es: " + titulo);
+            }else{
+                System.out.println("La serie con mas temporadas es: " + serie.titulo);
+            }
         }else{
-            System.out.println("La serie con mas temporadas es: " + serie.titulo);
-            System.out.println(serie.toString());
+            System.out.println("El objeto a comparar no es una serie");
         }
-
     }
 
     //Metodo que devuelve la serie con mas temporadas, como nos pide el ejercicio
